@@ -446,10 +446,39 @@ body{
             z-index: 3;
         }
 
-        .btn:hover {
+      .btn:hover {
             background-color: #d5a353; 
             color: #32303F;
             transform: translateY(0); 
+        }
+
+    
+        
+        /* This pseudo-element creates the dashed border effect */
+        .btn:before, .btn-reservation:before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border: 1px dashed #32303F;
+            border-radius: 8px;
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 0.3s ease-in-out;
+        }
+        .btn-g:before{
+           
+            border: 1px dashed #d5a353;
+        }
+        
+      
+
+        /* On hover, make the border fully visible and grow */
+        .btn:hover:before, .btn-reservation:hover:before {
+            opacity: 1;
+            transform: scale(1);
         }
 .btn-g{
     background-color: #d5a353;
@@ -457,9 +486,11 @@ body{
     z-index: 3;
 }
 .btn-g:hover{
+    
     background-color: #32303F;
     color: #d5a353;
 }
+
 
         .boxed-container   {
 	position: relative;
