@@ -454,8 +454,8 @@ body{
 
     
         
-        /* This pseudo-element creates the dashed border effect */
-        .btn:before, .btn-reservation:before {
+       /* This pseudo-element creates the dashed border effect */
+        .btn:before, .btn-reservation:before , .top-header-reser_btn:before {
             content: '';
             position: absolute;
             top: -5px;
@@ -472,11 +472,17 @@ body{
            
             border: 1px dashed #d5a353;
         }
+        .top-header-reser_btn:before {
+border: 1px dashed #d5a353;
+        }
         
-      
+     .top-header-reser_btn:hover{
+
+          transform: scale(1);
+     }
 
         /* On hover, make the border fully visible and grow */
-        .btn:hover:before, .btn-reservation:hover:before {
+        .btn:hover:before, .btn-reservation:hover:before , .top-header-reser_btn:hover:before {
             opacity: 1;
             transform: scale(1);
         }
